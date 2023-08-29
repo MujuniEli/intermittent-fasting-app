@@ -1,10 +1,18 @@
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
 
+
+const TimeCard = ({ label }) => {
+  return (
+    <div className="time-card">
+      {label}
+    </div>
+  );
+};
 
 const Hours = () => {
-
-            const hours = ['12am', '1am', '2am', '3am', '4am', '5am', '6am', '7am', '8am', '9am', '10am', '11am', '12pm']
-
-
+          const hours = Array.from({ length: 24 }, (_, i) => i + 1);
+            
   return (
     <main>
         <h3>Choose your fasting hours Schedule</h3>
@@ -15,10 +23,29 @@ const Hours = () => {
             <input type="checkbox" id="14/10Schedule" />
             <label htmlFor="14/10Schedule">14/10 Schedule</label> <span className="info-symbol">&#8505;</span>
 
-              <div className="card">
-                {hours.map((item) => (
-                  item
-                ))}
+            <div className="slider-container">
+                    <Carousel
+                      showArrows={true}
+                      showThumbs={false}
+                      renderArrowPrev={(clickHandler, hasPrev, label) =>
+                        hasPrev && (
+                          <button onClick={clickHandler} className="slider-arrow prev-arrow">
+                            &lt;
+                          </button>
+                        )
+                      }
+                      renderArrowNext={(clickHandler, hasNext, label) =>
+                        hasNext && (
+                          <button onClick={clickHandler} className="slider-arrow next-arrow">
+                            &gt;
+                          </button>
+                        )
+                      }
+                    >
+                      {hours.map(hour => (
+                        <TimeCard key={hour} label={`${hour % 12 || 12} ${hour < 12 ? 'AM' : 'PM'}`} />
+                      ))}
+                    </Carousel>
               </div>
       
 
