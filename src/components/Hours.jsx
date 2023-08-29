@@ -1,14 +1,7 @@
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel';
 
 
-const TimeCard = ({ label }) => {
-  return (
-    <div className="time-card">
-      {label}
-    </div>
-  );
-};
+
+
 
 const Hours = () => {
           const hours = Array.from({ length: 24 }, (_, i) => i + 1);
