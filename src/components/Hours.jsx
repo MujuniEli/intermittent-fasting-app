@@ -16,31 +16,11 @@ const Hours = () => {
             <input type="checkbox" id="14/10Schedule" />
             <label htmlFor="14/10Schedule">14/10 Schedule</label> <span className="info-symbol">&#8505;</span>
 
-            <div className="slider-container">
-                    <Carousel
-                      showArrows={true}
-                      showThumbs={false}
-                      renderArrowPrev={(clickHandler, hasPrev, label) =>
-                        hasPrev && (
-                          <button onClick={clickHandler} className="slider-arrow prev-arrow">
-                            &lt;
-                          </button>
-                        )
-                      }
-                      renderArrowNext={(clickHandler, hasNext, label) =>
-                        hasNext && (
-                          <button onClick={clickHandler} className="slider-arrow next-arrow">
-                            &gt;
-                          </button>
-                        )
-                      }
-                    >
-                      {hours.map(hour => (
-                        <TimeCard key={hour} label={`${hour % 12 || 12} ${hour < 12 ? 'AM' : 'PM'}`} />
-                      ))}
-                    </Carousel>
-              </div>
-      
+            <div className="card">
+              {hours.map((hr) => (
+                hr
+              ))}
+            </div>
 
     </main>
   )
