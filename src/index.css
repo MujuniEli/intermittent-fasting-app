@@ -20,6 +20,10 @@ body {
     background-color: #FCF8EF;
 }
 
+.schedules {
+             margin-top: 1rem;
+}
+
 .info-symbol {
     margin-left: 0.9rem;
     border: 1px solid #FEB51A ;
