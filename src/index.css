@@ -27,5 +27,20 @@ body {
     padding: 5px;
 }
 
+.card {
+    display: flex;
+    margin: 2rem;
+    border-top: 1px solid #FEB51A;
+    border-bottom: 1px solid #FEB51A;
+}
+
+.solo-card {
+                border: 1px solid #FEB51A;
+                border-radius: 5px;
+                margin: 2rem;
+                padding: 1rem;
+                text-align: center;
+}
+
 
   
