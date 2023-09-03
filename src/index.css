@@ -21,14 +21,14 @@ body {
 }
 
 .schedules {
-             margin-top: 1rem;
+             margin: 2rem;
 }
 
 .info-symbol {
     margin-left: 0.9rem;
     border: 1px solid #FEB51A ;
-    border-radius: 50%;
-    padding: 5px;
+    border-radius: 70%;
+    padding: 0.5rem;
 }
 
 .card {
