@@ -19,8 +19,19 @@ const getHours = () => {
 
 const displayHours = getHours();
 
+
+
 const Hours = () => {
-  
+  const [cardIndex, setCardIndex] = useState(null)
+
+  const handleSliderPrev = () => {
+    cardIndex 
+};
+
+const handleSliderNext = () => {
+    setCardIndex()
+}
+
   const hourCards = displayHours.map((hour) => (
     <div key={hour}>
       <h4 className="solo-card">{hour}</h4>
