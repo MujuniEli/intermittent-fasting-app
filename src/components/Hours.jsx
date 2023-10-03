@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Slider from "react-slick";
+
 
 const getHours = () => {
   let hours = [];
@@ -20,24 +20,7 @@ const getHours = () => {
 const displayHours = getHours();
 
 const Hours = () => {
-  const [sliderIndex, setSliderIndex] = useState(0);
-
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 4,
-  };
-
-  const handleSliderNext = () => {
-    setSliderIndex(sliderIndex + 1);
-  };
-
-  const handleSliderPrev = () => {
-    setSliderIndex(sliderIndex - 1);
-  };
-
+  
   const hourCards = displayHours.map((hour) => (
     <div key={hour}>
       <h4 className="solo-card">{hour}</h4>
@@ -61,9 +44,9 @@ const Hours = () => {
 
       <div className="slider-container">
       <button onClick={handleSliderPrev}>Previous</button>
-        {/* <Slider {...settings} initialSlide={sliderIndex}> */}
+        
           {hourCards}
-        {/* </Slider> */}
+       
       <button onClick={handleSliderNext}>Next</button>
         
       </div>
