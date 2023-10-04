@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import Swiper from "swiper";
 
 
@@ -23,18 +23,10 @@ const displayHours = getHours();
 
 
 const Hours = () => {
-  const [cardIndex, setCardIndex] = useState(null)
-
-  const handleSliderPrev = () => {
-    cardIndex 
-};
-
-const handleSliderNext = () => {
-    setCardIndex()
-}
+ 
 
   const hourCards = displayHours.map((hour) => (
-    <div key={hour}>
+    <div className="swiper-slide" key={hour}>
       <h4 className="solo-card">{hour}</h4>
     </div>
   ));
@@ -54,13 +46,21 @@ const handleSliderNext = () => {
         <span className="info-symbol">&#8505;</span>
       </div>
 
-      <div className="slider-container">
-      <button onClick={handleSliderPrev}>Previous</button>
+      <div className="swiper">
+      <div className="swiper-wrapper slider-container">
+      <div className="swiper-button-prev">
+      <button >Previous</button>
+      </div>
         
-          {hourCards}
-       
-      <button onClick={handleSliderNext}>Next</button>
+        {hourCards}
         
+          
+       <div className="swiper-button-next">
+       <button>Next</button>
+       </div>
+      
+        
+      </div>
       </div>
     </main>
   );
