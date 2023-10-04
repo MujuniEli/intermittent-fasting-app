@@ -20,7 +20,14 @@ const getHours = () => {
 
 const displayHours = getHours();
 
-
+const swiper = new Swiper('.swiper', {
+  direction: 'vertical',
+  loop: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
 
 const Hours = () => {
  
@@ -48,13 +55,13 @@ const Hours = () => {
 
       <div className="swiper">
       <div className="swiper-wrapper slider-container">
+      
       <div className="swiper-button-prev">
       <button >Previous</button>
       </div>
         
         {hourCards}
-        
-          
+            
        <div className="swiper-button-next">
        <button>Next</button>
        </div>
